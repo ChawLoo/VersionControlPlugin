@@ -65,7 +65,7 @@ catalog {
         library("mmkv", "com.tencent", "mmkv-static").version("1.2.13")
         library("permissionx", "com.guolindev.permissionx", "permissionx").version("1.6.4")
         library("wheelView", "com.github.zyyoona7", "wheelview").version("1.0.9")
-        library("toast", "com.github.getActivity", "ToastUtils").version("10.3")
+        library("toast", "com.github.getActivity", "ToastUtils").version("10.5")
         library("viewbinding-ktx", "com.github.DylanCaiCoding.ViewBindingKTX", "viewbinding-ktx").version("2.0.6")
         library("stateLayout", "com.github.liangjingkanji", "StateLayout").version("1.3.6")
 
@@ -105,7 +105,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "io.github.chawloo"
             artifactId = "VersionControlPlugin"
-            version = "1.0.8"
+            version = "1.0.9"
             from(components["versionCatalog"])
             pom {
                 name.set("VersionControlPlugin")
@@ -166,12 +166,12 @@ publishing {
             }
         }
     }
-    val userName = file("maven.properties").takeIf { it.canRead() }?.run {
+    val userName = file("../maven.properties").takeIf { it.canRead() }?.run {
         val versionProps = Properties()
         versionProps.load(inputStream())
         versionProps["maven.username"].toString()
     }
-    val pwd = file("maven.properties").takeIf { it.canRead() }?.run {
+    val pwd = file("../maven.properties").takeIf { it.canRead() }?.run {
         val versionProps = Properties()
         versionProps.load(inputStream())
         versionProps["maven.password"].toString()
