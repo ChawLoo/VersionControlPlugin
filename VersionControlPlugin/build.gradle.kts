@@ -20,27 +20,27 @@ catalog {
         library("reflect", "org.jetbrains.kotlin", "kotlin-reflect").versionRef("kotlin")
         bundle("kotlin", listOf("stdlib", "reflect"))
 
-        version("coroutines", "1.6.1-native-mt")
+        version("coroutines", "1.6.3")
         library("kotlinx-coroutines-core", "org.jetbrains.kotlinx", "kotlinx-coroutines-core").versionRef("coroutines")
         library("kotlinx-coroutines-android", "org.jetbrains.kotlinx", "kotlinx-coroutines-android").versionRef("coroutines")
         bundle("coroutines", listOf("kotlinx-coroutines-core", "kotlinx-coroutines-android"))
 
-        library("core-ktx", "androidx.core", "core-ktx").version("1.7.0")
-        library("appcompat", "androidx.appcompat", "appcompat").version("1.4.1")
+        library("core-ktx", "androidx.core", "core-ktx").version("1.8.0")
+        library("appcompat", "androidx.appcompat", "appcompat").version("1.4.2")
         library("multidex", "androidx.multidex", "multidex").version("2.0.1")
         library("activity-ktx", "androidx.activity", "activity-ktx").version("1.4.0")
         library("fragment-ktx", "androidx.fragment", "fragment-ktx").version("1.4.1")
         library("annotation", "androidx.annotation", "annotation").version("1.3.0")
-        library("constraintlayout", "androidx.constraintlayout", "constraintlayout").version("2.1.3")
+        library("constraintlayout", "androidx.constraintlayout", "constraintlayout").version("2.1.4")
         library("recyclerview", "androidx.recyclerview", "recyclerview").version("1.2.1")
         library("swiperefreshlayout", "androidx.swiperefreshlayout", "swiperefreshlayout").version("1.1.0")
         library("startup-runtime", "androidx.startup", "startup-runtime").version("1.1.1")
 
-        version("lifecycle", "2.4.1")
+        version("lifecycle", "2.5.0-rc01")
         library("viewmodel", "androidx.lifecycle", "lifecycle-viewmodel-ktx").versionRef("lifecycle")
         library("livedata", "androidx.lifecycle", "lifecycle-livedata-ktx").versionRef("lifecycle")
 
-        version("room", "2.5.0-alpha01")
+        version("room", "2.5.0-alpha02")
         library("room-runtime", "androidx.room", "room-runtime").versionRef("room")
         library("room-ktx", "androidx.room", "room-ktx").versionRef("room")
         library("room-compiler", "androidx.room", "room-compiler").versionRef("room")
@@ -57,9 +57,9 @@ catalog {
         library("material", "com.google.android.material", "material").version("1.5.0-alpha04")
         library("fastjson", "com.alibaba", "fastjson").version("1.2.79")
         library("retrofit", "com.squareup.retrofit2", "retrofit").version("2.9.0")
-        library("okhttp", "com.squareup.okhttp3", "okhttp").version("5.0.0-alpha.7")
+        library("okhttp", "com.squareup.okhttp3", "okhttp").version("5.0.0-alpha.10")
         library("kotlinx-serialization-json", "org.jetbrains.kotlinx", "kotlinx-serialization-json").version("1.3.3")
-        library("brv", "com.github.liangjingkanji", "BRV").version("1.3.78")
+        library("brv", "com.github.liangjingkanji", "BRV").version("1.3.79")
         library("jodatime", "joda-time", "joda-time").version("2.10.14")
         library("basePopup", "io.github.razerdp", "BasePopup").version("3.2.0")
         library("mmkv", "com.tencent", "mmkv-static").version("1.2.13")
@@ -67,12 +67,12 @@ catalog {
         library("wheelView", "com.github.zyyoona7", "wheelview").version("1.0.9")
         library("toast", "com.github.getActivity", "ToastUtils").version("10.5")
         library("viewbinding-ktx", "com.github.DylanCaiCoding.ViewBindingKTX", "viewbinding-ktx").version("2.0.6")
-        library("stateLayout", "com.github.liangjingkanji", "StateLayout").version("1.3.6")
+        library("stateLayout", "com.github.liangjingkanji", "StateLayout").version("1.3.8")
 
-
-        library("fastjson2", "com.alibaba.fastjson2", "fastjson2").version("2.0.6")
-        library("fastjson2-kotlin", "com.alibaba.fastjson2", "fastjson2-kotlin").version("2.0.6")
-        library("fastjson2-extension", "com.alibaba.fastjson2", "fastjson2-extension").version("2.0.6")
+        version("fastjson2", "2.0.8.graal")
+        library("fastjson2", "com.alibaba.fastjson2", "fastjson2").versionRef("fastjson2")
+        library("fastjson2-kotlin", "com.alibaba.fastjson2", "fastjson2-kotlin").versionRef("fastjson2")
+        library("fastjson2-extension", "com.alibaba.fastjson2", "fastjson2-extension").versionRef("fastjson2")
         bundle("fastjson2", listOf("fastjson2", "fastjson2-kotlin", "fastjson2-extension"))
 
         version("arouter", "1.5.2")
@@ -83,13 +83,13 @@ catalog {
         library("immersionbar-ktx", "com.gyf.immersionbar", "immersionbar-ktx").version("3.0.0")
         bundle("immersionbar", listOf("immersionbar", "immersionbar-ktx"))
 
-        version("saf-log", "2.6.7")
+        version("saf-log", "2.6.8")
         library("saf-log-core", "com.github.fengzhizi715.SAF-Kotlin-log", "core").versionRef("saf-log")
         library("saf-log-fastjson", "com.github.fengzhizi715.SAF-Kotlin-log", "fastjson").versionRef("saf-log")
         library("saf-log-okhttp", "com.github.fengzhizi715.SAF-Kotlin-log", "okhttp").versionRef("saf-log")
         bundle("saf-log", listOf("saf-log-core", "saf-log-fastjson", "saf-log-okhttp"))
 
-        library("x5webview", "com.tencent.tbs", "tbssdk").version("44181")
+        library("x5webview", "com.tencent.tbs", "tbssdk").version("44199")
         library("wechat-sdk-android-without-mta", "com.tencent.mm.opensdk", "wechat-sdk-android-without-mta").version("6.8.0")
 
         version("coil", "2.1.0")
@@ -105,7 +105,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "io.github.chawloo"
             artifactId = "VersionControlPlugin"
-            version = "1.0.9"
+            version = "1.1.0"
             from(components["versionCatalog"])
             pom {
                 name.set("VersionControlPlugin")
