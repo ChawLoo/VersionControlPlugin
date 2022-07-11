@@ -12,7 +12,7 @@ catalog {
         version("minSdk", "26")
         version("targetSdk", "32")
         version("compileSdk", "32")
-        version("kotlin", "1.7.0")
+        version("kotlin", "1.7.10")
         plugin("kotlin-android", "org.jetbrains.kotlin.android").versionRef("kotlin")
         plugin("kotlin-kapt", "org.jetbrains.kotlin.kapt").versionRef("kotlin")
 
@@ -30,13 +30,13 @@ catalog {
         library("multidex", "androidx.multidex", "multidex").version("2.0.1")
         library("activity-ktx", "androidx.activity", "activity-ktx").version("1.4.0")
         library("fragment-ktx", "androidx.fragment", "fragment-ktx").version("1.4.1")
-        library("annotation", "androidx.annotation", "annotation").version("1.3.0")
+        library("annotation", "androidx.annotation", "annotation").version("1.4.0")
         library("constraintlayout", "androidx.constraintlayout", "constraintlayout").version("2.1.4")
         library("recyclerview", "androidx.recyclerview", "recyclerview").version("1.2.1")
         library("swiperefreshlayout", "androidx.swiperefreshlayout", "swiperefreshlayout").version("1.1.0")
         library("startup-runtime", "androidx.startup", "startup-runtime").version("1.1.1")
 
-        version("lifecycle", "2.5.0-rc01")
+        version("lifecycle", "2.5.0-rc02")
         library("viewmodel", "androidx.lifecycle", "lifecycle-viewmodel-ktx").versionRef("lifecycle")
         library("livedata", "androidx.lifecycle", "lifecycle-livedata-ktx").versionRef("lifecycle")
 
@@ -49,13 +49,13 @@ catalog {
         version("koin", "3.2.0")
         library("koin-android", "io.insert-koin", "koin-android").versionRef("koin")
 
-        version("koin_annotations_version", "1.0.0")
+        version("koin_annotations_version", "1.0.1")
         library("koin-compiler", "io.insert-koin", "koin-ksp-compiler").versionRef("koin_annotations_version")
         library("koin-annotations", "io.insert-koin", "koin-annotations").versionRef("koin_annotations_version")
 
         library("androidautosize", "com.github.JessYanCoding", "AndroidAutoSize").version("v1.2.1")
         library("material", "com.google.android.material", "material").version("1.5.0-alpha04")
-        library("fastjson", "com.alibaba", "fastjson").version("1.2.79")
+        library("fastjson", "com.alibaba", "fastjson").version("2.0.9.graal")
         library("retrofit", "com.squareup.retrofit2", "retrofit").version("2.9.0")
         library("okhttp", "com.squareup.okhttp3", "okhttp").version("5.0.0-alpha.10")
         library("kotlinx-serialization-json", "org.jetbrains.kotlinx", "kotlinx-serialization-json").version("1.3.3")
@@ -66,10 +66,11 @@ catalog {
         library("permissionx", "com.guolindev.permissionx", "permissionx").version("1.6.4")
         library("wheelView", "com.github.zyyoona7", "wheelview").version("1.0.9")
         library("toast", "com.github.getActivity", "ToastUtils").version("10.5")
-        library("viewbinding-ktx", "com.github.DylanCaiCoding.ViewBindingKTX", "viewbinding-ktx").version("2.0.6")
+        library("viewbinding-ktx", "com.github.DylanCaiCoding.ViewBindingKTX", "viewbinding-ktx").version("2.1.0")
         library("stateLayout", "com.github.liangjingkanji", "StateLayout").version("1.3.8")
+        library("banner", "io.github.youth5201314", "banner").version("2.2.2")
 
-        version("fastjson2", "2.0.8.graal")
+        version("fastjson2", "2.0.9.graal")
         library("fastjson2", "com.alibaba.fastjson2", "fastjson2").versionRef("fastjson2")
         library("fastjson2-kotlin", "com.alibaba.fastjson2", "fastjson2-kotlin").versionRef("fastjson2")
         library("fastjson2-extension", "com.alibaba.fastjson2", "fastjson2-extension").versionRef("fastjson2")
@@ -105,7 +106,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "io.github.chawloo"
             artifactId = "VersionControlPlugin"
-            version = "1.1.0"
+            version = "1.1.1"
             from(components["versionCatalog"])
             pom {
                 name.set("VersionControlPlugin")
@@ -223,10 +224,10 @@ android {
 
 dependencies {
 
-    implementation("androidx.core:core-ktx:1.7.0")
-    implementation("androidx.appcompat:appcompat:1.4.1")
-    implementation("com.google.android.material:material:1.5.0")
-    testImplementation("junit:junit:4.13.2")
+    implementation(lib.core.ktx)
+    implementation(lib.appcompat)
+    implementation(lib.material)
+    testImplementation(lib.junit)
     androidTestImplementation("androidx.test.ext:junit:1.1.3")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
 }
