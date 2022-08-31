@@ -53,7 +53,7 @@ catalog {
         library("koin-compiler", "io.insert-koin", "koin-ksp-compiler").versionRef("koin_annotations_version")
         library("koin-annotations", "io.insert-koin", "koin-annotations").versionRef("koin_annotations_version")
 
-        library("androidautosize", "com.github.JessYanCoding", "AndroidAutoSize").version("v1.2.1")
+        library("androidautosize", "me.jessyan", "autosize").version("1.2.1")
         library("material", "com.google.android.material", "material").version("1.5.0-alpha04")
         library("fastjson", "com.alibaba", "fastjson").version("2.0.9.graal")
         library("retrofit", "com.squareup.retrofit2", "retrofit").version("2.9.0")
@@ -106,7 +106,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "io.github.chawloo"
             artifactId = "VersionControlPlugin"
-            version = "1.1.1"
+            version = "1.1.2"
             from(components["versionCatalog"])
             pom {
                 name.set("VersionControlPlugin")
