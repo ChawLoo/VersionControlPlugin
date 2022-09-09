@@ -20,23 +20,22 @@ catalog {
         library("reflect", "org.jetbrains.kotlin", "kotlin-reflect").versionRef("kotlin")
         bundle("kotlin", listOf("stdlib", "reflect"))
 
-        version("coroutines", "1.6.3")
+        version("coroutines", "1.6.4")
         library("kotlinx-coroutines-core", "org.jetbrains.kotlinx", "kotlinx-coroutines-core").versionRef("coroutines")
         library("kotlinx-coroutines-android", "org.jetbrains.kotlinx", "kotlinx-coroutines-android").versionRef("coroutines")
         bundle("coroutines", listOf("kotlinx-coroutines-core", "kotlinx-coroutines-android"))
 
         library("core-ktx", "androidx.core", "core-ktx").version("1.8.0")
-        library("appcompat", "androidx.appcompat", "appcompat").version("1.4.2")
+        library("appcompat", "androidx.appcompat", "appcompat").version("1.5.0")
         library("multidex", "androidx.multidex", "multidex").version("2.0.1")
-        library("activity-ktx", "androidx.activity", "activity-ktx").version("1.4.0")
-        library("fragment-ktx", "androidx.fragment", "fragment-ktx").version("1.4.1")
+        library("activity-ktx", "androidx.activity", "activity-ktx").version("1.5.1")
+        library("fragment-ktx", "androidx.fragment", "fragment-ktx").version("1.5.2")
         library("annotation", "androidx.annotation", "annotation").version("1.4.0")
         library("constraintlayout", "androidx.constraintlayout", "constraintlayout").version("2.1.4")
         library("recyclerview", "androidx.recyclerview", "recyclerview").version("1.2.1")
-        library("swiperefreshlayout", "androidx.swiperefreshlayout", "swiperefreshlayout").version("1.1.0")
         library("startup-runtime", "androidx.startup", "startup-runtime").version("1.1.1")
 
-        version("lifecycle", "2.5.0-rc02")
+        version("lifecycle", "2.5.1")
         library("viewmodel", "androidx.lifecycle", "lifecycle-viewmodel-ktx").versionRef("lifecycle")
         library("livedata", "androidx.lifecycle", "lifecycle-livedata-ktx").versionRef("lifecycle")
 
@@ -55,22 +54,24 @@ catalog {
 
         library("androidautosize", "me.jessyan", "autosize").version("1.2.1")
         library("material", "com.google.android.material", "material").version("1.5.0-alpha04")
-        library("fastjson", "com.alibaba", "fastjson").version("2.0.9.graal")
+        library("fastjson", "com.alibaba", "fastjson").version("2.0.12.graal")
         library("retrofit", "com.squareup.retrofit2", "retrofit").version("2.9.0")
         library("okhttp", "com.squareup.okhttp3", "okhttp").version("5.0.0-alpha.10")
-        library("kotlinx-serialization-json", "org.jetbrains.kotlinx", "kotlinx-serialization-json").version("1.3.3")
-        library("brv", "com.github.liangjingkanji", "BRV").version("1.3.79")
-        library("jodatime", "joda-time", "joda-time").version("2.10.14")
+        library("kotlinx-serialization-json", "org.jetbrains.kotlinx", "kotlinx-serialization-json").version("1.4.0")
+        library("brv", "com.github.liangjingkanji", "BRV").version("1.3.80")
+        library("jodatime", "joda-time", "joda-time").version("2.11.1")
         library("basePopup", "io.github.razerdp", "BasePopup").version("3.2.0")
-        library("mmkv", "com.tencent", "mmkv-static").version("1.2.13")
+        library("mmkv", "com.tencent", "mmkv-static").version("1.2.14")
         library("permissionx", "com.guolindev.permissionx", "permissionx").version("1.6.4")
-        library("wheelView", "com.github.zyyoona7", "wheelview").version("1.0.9")
+        library("wheelView", "com.github.zyyoona7", "wheelview").version("2.0.4")
         library("toast", "com.github.getActivity", "ToastUtils").version("10.5")
         library("viewbinding-ktx", "com.github.DylanCaiCoding.ViewBindingKTX", "viewbinding-ktx").version("2.1.0")
-        library("stateLayout", "com.github.liangjingkanji", "StateLayout").version("1.3.8")
         library("banner", "io.github.youth5201314", "banner").version("2.2.2")
+        library("flexbox", "com.google.android.flexbox", "flexbox").version("3.0.0")
 
-        version("fastjson2", "2.0.9.graal")
+
+
+        version("fastjson2", "2.0.12")
         library("fastjson2", "com.alibaba.fastjson2", "fastjson2").versionRef("fastjson2")
         library("fastjson2-kotlin", "com.alibaba.fastjson2", "fastjson2-kotlin").versionRef("fastjson2")
         library("fastjson2-extension", "com.alibaba.fastjson2", "fastjson2-extension").versionRef("fastjson2")
@@ -90,10 +91,10 @@ catalog {
         library("saf-log-okhttp", "com.github.fengzhizi715.SAF-Kotlin-log", "okhttp").versionRef("saf-log")
         bundle("saf-log", listOf("saf-log-core", "saf-log-fastjson", "saf-log-okhttp"))
 
-        library("x5webview", "com.tencent.tbs", "tbssdk").version("44199")
+        library("x5webview", "com.tencent.tbs", "tbssdk").version("44226")
         library("wechat-sdk-android-without-mta", "com.tencent.mm.opensdk", "wechat-sdk-android-without-mta").version("6.8.0")
 
-        version("coil", "2.1.0")
+        version("coil", "2.2.1")
         library("coil", "io.coil-kt", "coil").versionRef("coil")
         library("coil-gif", "io.coil-kt", "coil-gif").versionRef("coil")
         bundle("coil", listOf("coil", "coil-gif"))
@@ -106,7 +107,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "io.github.chawloo"
             artifactId = "VersionControlPlugin"
-            version = "1.1.2"
+            version = "1.1.3"
             from(components["versionCatalog"])
             pom {
                 name.set("VersionControlPlugin")
@@ -223,7 +224,6 @@ android {
 }
 
 dependencies {
-
     implementation(lib.core.ktx)
     implementation(lib.appcompat)
     implementation(lib.material)
