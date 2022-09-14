@@ -62,7 +62,7 @@ catalog {
         library("jodatime", "joda-time", "joda-time").version("2.11.1")
         library("basePopup", "io.github.razerdp", "BasePopup").version("3.2.0")
         library("mmkv", "com.tencent", "mmkv-static").version("1.2.14")
-        library("permissionx", "com.guolindev.permissionx", "permissionx").version("1.6.4")
+        library("xPermission", "com.github.getActivity", "XXPermissions").version("16.2")
         library("wheelView", "com.github.zyyoona7", "wheelview").version("2.0.4")
         library("toast", "com.github.getActivity", "ToastUtils").version("10.5")
         library("viewbinding-ktx", "com.github.DylanCaiCoding.ViewBindingKTX", "viewbinding-ktx").version("2.1.0")
@@ -107,7 +107,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "io.github.chawloo"
             artifactId = "VersionControlPlugin"
-            version = "1.1.3"
+            version = "1.1.4"
             from(components["versionCatalog"])
             pom {
                 name.set("VersionControlPlugin")
