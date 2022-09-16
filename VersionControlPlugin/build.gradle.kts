@@ -12,7 +12,7 @@ catalog {
         version("minSdk", "26")
         version("targetSdk", "32")
         version("compileSdk", "32")
-        version("kotlin", "1.7.10")
+        version("kotlin", "1.7.20-RC")
         plugin("kotlin-android", "org.jetbrains.kotlin.android").versionRef("kotlin")
         plugin("kotlin-kapt", "org.jetbrains.kotlin.kapt").versionRef("kotlin")
 
@@ -68,6 +68,7 @@ catalog {
         library("viewbinding-ktx", "com.github.DylanCaiCoding.ViewBindingKTX", "viewbinding-ktx").version("2.1.0")
         library("banner", "io.github.youth5201314", "banner").version("2.2.2")
         library("flexbox", "com.google.android.flexbox", "flexbox").version("3.0.0")
+        library("evenbus", "org.greenrobot", "eventbus").version("3.3.1")
 
 
 
@@ -107,7 +108,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "io.github.chawloo"
             artifactId = "VersionControlPlugin"
-            version = "1.1.4"
+            version = "1.1.5"
             from(components["versionCatalog"])
             pom {
                 name.set("VersionControlPlugin")
@@ -221,6 +222,7 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+    namespace = "cn.chawloo.versioncontrolplugin"
 }
 
 dependencies {
