@@ -32,7 +32,7 @@ android {
 }
 
 dependencies {
-    implementation(lib.core)
+    implementation(lib.core.ktx)
     implementation(lib.appcompat)
     implementation(lib.material)
     implementation(lib.constraintlayout)

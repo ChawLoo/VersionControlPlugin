@@ -45,10 +45,10 @@ catalog {
         library("room-compiler", "androidx.room", "room-compiler").versionRef("room")
         bundle("room", listOf("room-runtime", "room-ktx"))
 
-        version("koin", "3.2.0")
+        version("koin", "3.2.1")
         library("koin-android", "io.insert-koin", "koin-android").versionRef("koin")
 
-        version("koin_annotations_version", "1.0.1")
+        version("koin_annotations_version", "1.0.2")
         library("koin-compiler", "io.insert-koin", "koin-ksp-compiler").versionRef("koin_annotations_version")
         library("koin-annotations", "io.insert-koin", "koin-annotations").versionRef("koin_annotations_version")
 
