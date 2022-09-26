@@ -26,7 +26,7 @@ catalog {
         bundle("coroutines", listOf("kotlinx-coroutines-core", "kotlinx-coroutines-android"))
 
         library("core-ktx", "androidx.core", "core-ktx").version("1.8.0")
-        library("appcompat", "androidx.appcompat", "appcompat").version("1.5.0")
+        library("appcompat", "androidx.appcompat", "appcompat").version("1.6.0-rc01")
         library("multidex", "androidx.multidex", "multidex").version("2.0.1")
         library("activity-ktx", "androidx.activity", "activity-ktx").version("1.5.1")
         library("fragment-ktx", "androidx.fragment", "fragment-ktx").version("1.5.2")
@@ -83,7 +83,7 @@ catalog {
         library("arouter-api", "com.alibaba", "arouter-api").versionRef("arouter")
 
         library("immersionbar", "com.geyifeng.immersionbar", "immersionbar").version("3.2.2")
-        library("immersionbar-ktx", "com.gyf.immersionbar", "immersionbar-ktx").version("3.0.0")
+        library("immersionbar-ktx", "com.geyifeng.immersionbar", "immersionbar-ktx").version("3.2.2")
         bundle("immersionbar", listOf("immersionbar", "immersionbar-ktx"))
 
         version("saf-log", "2.6.8")
@@ -108,7 +108,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "io.github.chawloo"
             artifactId = "VersionControlPlugin"
-            version = "1.1.5"
+            version = "1.1.6"
             from(components["versionCatalog"])
             pom {
                 name.set("VersionControlPlugin")
