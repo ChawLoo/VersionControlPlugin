@@ -10,8 +10,8 @@ plugins {
 catalog {
     versionCatalog {
         version("minSdk", "26")
-        version("targetSdk", "32")
-        version("compileSdk", "32")
+        version("targetSdk", "33")
+        version("compileSdk", "33")
         version("kotlin", "1.7.20-RC")
         plugin("kotlin-android", "org.jetbrains.kotlin.android").versionRef("kotlin")
         plugin("kotlin-kapt", "org.jetbrains.kotlin.kapt").versionRef("kotlin")
@@ -107,7 +107,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "io.github.chawloo"
             artifactId = "VersionControlPlugin"
-            version = "1.1.7"
+            version = "1.1.8"
             from(components["versionCatalog"])
             pom {
                 name.set("VersionControlPlugin")
