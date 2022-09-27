@@ -88,9 +88,8 @@ catalog {
 
         version("saf-log", "2.6.8")
         library("saf-log-core", "com.github.fengzhizi715.SAF-Kotlin-log", "core").versionRef("saf-log")
-        library("saf-log-fastjson", "com.github.fengzhizi715.SAF-Kotlin-log", "fastjson").versionRef("saf-log")
-        library("saf-log-okhttp", "com.github.fengzhizi715.SAF-Kotlin-log", "okhttp").versionRef("saf-log")
-        bundle("saf-log", listOf("saf-log-core", "saf-log-fastjson", "saf-log-okhttp"))
+        library("saf-log-okhttp", "com.github.fengzhizi715", "saf-logginginterceptor").version("v1.6.13")
+        bundle("saf-log", listOf("saf-log-core", "saf-log-okhttp"))
 
         library("x5webview", "com.tencent.tbs", "tbssdk").version("44226")
         library("wechat-sdk-android-without-mta", "com.tencent.mm.opensdk", "wechat-sdk-android-without-mta").version("6.8.0")
@@ -108,7 +107,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "io.github.chawloo"
             artifactId = "VersionControlPlugin"
-            version = "1.1.6"
+            version = "1.1.7"
             from(components["versionCatalog"])
             pom {
                 name.set("VersionControlPlugin")
