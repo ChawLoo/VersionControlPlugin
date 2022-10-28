@@ -12,7 +12,7 @@ catalog {
         version("minSdk", "26")
         version("targetSdk", "33")
         version("compileSdk", "33")
-        version("kotlin", "1.7.20-RC")
+        version("kotlin", "1.7.20")
         plugin("kotlin-android", "org.jetbrains.kotlin.android").versionRef("kotlin")
         plugin("kotlin-kapt", "org.jetbrains.kotlin.kapt").versionRef("kotlin")
 
@@ -25,12 +25,14 @@ catalog {
         library("kotlinx-coroutines-android", "org.jetbrains.kotlinx", "kotlinx-coroutines-android").versionRef("coroutines")
         bundle("coroutines", listOf("kotlinx-coroutines-core", "kotlinx-coroutines-android"))
 
-        library("core-ktx", "androidx.core", "core-ktx").version("1.8.0")
+        library("kotlinx-serialization-json", "org.jetbrains.kotlinx", "kotlinx-serialization-json").version("1.4.0")
+
+        library("core-ktx", "androidx.core", "core-ktx").version("1.9.0")
         library("appcompat", "androidx.appcompat", "appcompat").version("1.6.0-rc01")
         library("multidex", "androidx.multidex", "multidex").version("2.0.1")
-        library("activity-ktx", "androidx.activity", "activity-ktx").version("1.5.1")
-        library("fragment-ktx", "androidx.fragment", "fragment-ktx").version("1.5.2")
-        library("annotation", "androidx.annotation", "annotation").version("1.4.0")
+        library("activity-ktx", "androidx.activity", "activity-ktx").version("1.6.0")
+        library("fragment-ktx", "androidx.fragment", "fragment-ktx").version("1.5.3")
+        library("annotation", "androidx.annotation", "annotation").version("1.5.0")
         library("constraintlayout", "androidx.constraintlayout", "constraintlayout").version("2.1.4")
         library("recyclerview", "androidx.recyclerview", "recyclerview").version("1.2.1")
         library("startup-runtime", "androidx.startup", "startup-runtime").version("1.1.1")
@@ -39,16 +41,16 @@ catalog {
         library("viewmodel", "androidx.lifecycle", "lifecycle-viewmodel-ktx").versionRef("lifecycle")
         library("livedata", "androidx.lifecycle", "lifecycle-livedata-ktx").versionRef("lifecycle")
 
-        version("room", "2.5.0-alpha02")
+        version("room", "2.5.0-alpha03")
         library("room-runtime", "androidx.room", "room-runtime").versionRef("room")
         library("room-ktx", "androidx.room", "room-ktx").versionRef("room")
         library("room-compiler", "androidx.room", "room-compiler").versionRef("room")
         bundle("room", listOf("room-runtime", "room-ktx"))
 
-        version("koin", "3.2.1")
+        version("koin", "3.2.2")
         library("koin-android", "io.insert-koin", "koin-android").versionRef("koin")
 
-        version("koin_annotations_version", "1.0.2")
+        version("koin_annotations_version", "1.0.3")
         library("koin-compiler", "io.insert-koin", "koin-ksp-compiler").versionRef("koin_annotations_version")
         library("koin-annotations", "io.insert-koin", "koin-annotations").versionRef("koin_annotations_version")
 
@@ -57,9 +59,8 @@ catalog {
         library("fastjson", "com.alibaba", "fastjson").version("2.0.12.graal")
         library("retrofit", "com.squareup.retrofit2", "retrofit").version("2.9.0")
         library("okhttp", "com.squareup.okhttp3", "okhttp").version("5.0.0-alpha.10")
-        library("kotlinx-serialization-json", "org.jetbrains.kotlinx", "kotlinx-serialization-json").version("1.4.0")
         library("brv", "com.github.liangjingkanji", "BRV").version("1.3.80")
-        library("jodatime", "joda-time", "joda-time").version("2.11.1")
+        library("jodatime", "joda-time", "joda-time").version("2.11.2")
         library("basePopup", "io.github.razerdp", "BasePopup").version("3.2.0")
         library("mmkv", "com.tencent", "mmkv-static").version("1.2.14")
         library("xPermission", "com.github.getActivity", "XXPermissions").version("16.2")
@@ -94,7 +95,7 @@ catalog {
         library("x5webview", "com.tencent.tbs", "tbssdk").version("44226")
         library("wechat-sdk-android-without-mta", "com.tencent.mm.opensdk", "wechat-sdk-android-without-mta").version("6.8.0")
 
-        version("coil", "2.2.1")
+        version("coil", "2.2.2")
         library("coil", "io.coil-kt", "coil").versionRef("coil")
         library("coil-gif", "io.coil-kt", "coil-gif").versionRef("coil")
         bundle("coil", listOf("coil", "coil-gif"))
