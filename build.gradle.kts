@@ -11,9 +11,9 @@ buildscript {
     }
 
     dependencies {
-        classpath("com.android.tools.build:gradle:7.3.0")
-        classpath(kotlin("gradle-plugin", version = lib.versions.kotlin.get()))
-        classpath(kotlin("serialization", version = lib.versions.kotlin.get()))
+        classpath("com.android.tools.build:gradle:7.3.1")
+        classpath(kotlin("gradle-plugin", version = cLibs.versions.kotlin.get()))
+        classpath(kotlin("serialization", version = cLibs.versions.kotlin.get()))
         classpath("com.alibaba:arouter-register:1.0.2")
     }
 }

@@ -22,12 +22,11 @@ dependencyResolutionManagement {
         maven(url = "https://jitpack.io")
     }
     versionCatalogs {
-        create("lib") {
+        create("cLibs") {
             from("io.github.chawloo:VersionControlPlugin:1.1.0")
         }
     }
 }
 rootProject.name = "VersionControlPlugin"
-enableFeaturePreview("VERSION_CATALOGS")
 include(":app")
 include(":VersionControlPlugin")

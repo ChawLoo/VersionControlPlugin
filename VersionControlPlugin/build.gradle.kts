@@ -30,8 +30,8 @@ catalog {
         library("core-ktx", "androidx.core", "core-ktx").version("1.9.0")
         library("appcompat", "androidx.appcompat", "appcompat").version("1.6.0-rc01")
         library("multidex", "androidx.multidex", "multidex").version("2.0.1")
-        library("activity-ktx", "androidx.activity", "activity-ktx").version("1.6.0")
-        library("fragment-ktx", "androidx.fragment", "fragment-ktx").version("1.5.3")
+        library("activity-ktx", "androidx.activity", "activity-ktx").version("1.6.1")
+        library("fragment-ktx", "androidx.fragment", "fragment-ktx").version("1.5.4")
         library("annotation", "androidx.annotation", "annotation").version("1.5.0")
         library("constraintlayout", "androidx.constraintlayout", "constraintlayout").version("2.1.4")
         library("recyclerview", "androidx.recyclerview", "recyclerview").version("1.2.1")
@@ -41,43 +41,30 @@ catalog {
         library("viewmodel", "androidx.lifecycle", "lifecycle-viewmodel-ktx").versionRef("lifecycle")
         library("livedata", "androidx.lifecycle", "lifecycle-livedata-ktx").versionRef("lifecycle")
 
-        version("room", "2.5.0-alpha03")
+        version("room", "2.5.0-beta02")
         library("room-runtime", "androidx.room", "room-runtime").versionRef("room")
         library("room-ktx", "androidx.room", "room-ktx").versionRef("room")
         library("room-compiler", "androidx.room", "room-compiler").versionRef("room")
         bundle("room", listOf("room-runtime", "room-ktx"))
 
-        version("koin", "3.2.2")
+        version("koin", "3.3.1")
         library("koin-android", "io.insert-koin", "koin-android").versionRef("koin")
-
-        version("koin_annotations_version", "1.0.3")
-        library("koin-compiler", "io.insert-koin", "koin-ksp-compiler").versionRef("koin_annotations_version")
-        library("koin-annotations", "io.insert-koin", "koin-annotations").versionRef("koin_annotations_version")
 
         library("androidautosize", "me.jessyan", "autosize").version("1.2.1")
         library("material", "com.google.android.material", "material").version("1.5.0-alpha04")
-        library("fastjson", "com.alibaba", "fastjson").version("2.0.12.graal")
         library("retrofit", "com.squareup.retrofit2", "retrofit").version("2.9.0")
         library("okhttp", "com.squareup.okhttp3", "okhttp").version("5.0.0-alpha.10")
-        library("brv", "com.github.liangjingkanji", "BRV").version("1.3.80")
-        library("jodatime", "joda-time", "joda-time").version("2.11.2")
+        library("brv", "com.github.liangjingkanji", "BRV").version("1.3.86")
+        library("jodatime", "joda-time", "joda-time").version("2.12.2")
         library("basePopup", "io.github.razerdp", "BasePopup").version("3.2.0")
         library("mmkv", "com.tencent", "mmkv-static").version("1.2.14")
-        library("xPermission", "com.github.getActivity", "XXPermissions").version("16.2")
+        library("xPermission", "com.github.getActivity", "XXPermissions").version("16.5")
         library("wheelView", "com.github.zyyoona7", "wheelview").version("2.0.4")
-        library("toast", "com.github.getActivity", "ToastUtils").version("10.5")
+        library("toast", "com.github.getActivity", "ToastUtils").version("11.2")
         library("viewbinding-ktx", "com.github.DylanCaiCoding.ViewBindingKTX", "viewbinding-ktx").version("2.1.0")
         library("banner", "io.github.youth5201314", "banner").version("2.2.2")
         library("flexbox", "com.google.android.flexbox", "flexbox").version("3.0.0")
         library("evenbus", "org.greenrobot", "eventbus").version("3.3.1")
-
-
-
-        version("fastjson2", "2.0.12")
-        library("fastjson2", "com.alibaba.fastjson2", "fastjson2").versionRef("fastjson2")
-        library("fastjson2-kotlin", "com.alibaba.fastjson2", "fastjson2-kotlin").versionRef("fastjson2")
-        library("fastjson2-extension", "com.alibaba.fastjson2", "fastjson2-extension").versionRef("fastjson2")
-        bundle("fastjson2", listOf("fastjson2", "fastjson2-kotlin", "fastjson2-extension"))
 
         version("arouter", "1.5.2")
         library("arouter-compiler", "com.alibaba", "arouter-compiler").versionRef("arouter")
@@ -92,7 +79,7 @@ catalog {
         library("saf-log-okhttp", "com.github.fengzhizi715", "saf-logginginterceptor").version("v1.6.13")
         bundle("saf-log", listOf("saf-log-core", "saf-log-okhttp"))
 
-        library("x5webview", "com.tencent.tbs", "tbssdk").version("44226")
+        library("x5webview", "com.tencent.tbs", "tbssdk").version("54002-beta")
         library("wechat-sdk-android-without-mta", "com.tencent.mm.opensdk", "wechat-sdk-android-without-mta").version("6.8.0")
 
         version("coil", "2.2.2")
@@ -108,7 +95,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "io.github.chawloo"
             artifactId = "VersionControlPlugin"
-            version = "1.1.8"
+            version = "1.1.9"
             from(components["versionCatalog"])
             pom {
                 name.set("VersionControlPlugin")
@@ -200,11 +187,11 @@ signing {
 }
 
 android {
-    compileSdk = 32
+    compileSdk = 33
 
     defaultConfig {
         minSdk = 21
-        targetSdk = 32
+        targetSdk = 33
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
@@ -226,11 +213,11 @@ android {
 }
 
 dependencies {
-    implementation(lib.core.ktx)
-    implementation(lib.appcompat)
-    implementation(lib.material)
-    testImplementation(lib.junit)
-    androidTestImplementation("androidx.test.ext:junit:1.1.3")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
+    implementation(cLibs.core.ktx)
+    implementation(cLibs.appcompat)
+    implementation(cLibs.material)
+    testImplementation(cLibs.junit)
+    androidTestImplementation("androidx.test.ext:junit:1.1.4")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.0")
 }
 

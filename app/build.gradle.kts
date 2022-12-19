@@ -32,8 +32,8 @@ android {
 }
 
 dependencies {
-    implementation(lib.core.ktx)
-    implementation(lib.appcompat)
-    implementation(lib.material)
-    implementation(lib.constraintlayout)
+    implementation(cLibs.core.ktx)
+    implementation(cLibs.appcompat)
+    implementation(cLibs.material)
+    implementation(cLibs.constraintlayout)
 }
