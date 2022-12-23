@@ -25,7 +25,7 @@ catalog {
         library("kotlinx-coroutines-android", "org.jetbrains.kotlinx", "kotlinx-coroutines-android").versionRef("coroutines")
         bundle("coroutines", listOf("kotlinx-coroutines-core", "kotlinx-coroutines-android"))
 
-        library("kotlinx-serialization-json", "org.jetbrains.kotlinx", "kotlinx-serialization-json").version("1.4.0")
+        library("kotlinx-serialization-json", "org.jetbrains.kotlinx", "kotlinx-serialization-json").version("1.4.1")
 
         library("core-ktx", "androidx.core", "core-ktx").version("1.9.0")
         library("appcompat", "androidx.appcompat", "appcompat").version("1.6.0-rc01")
