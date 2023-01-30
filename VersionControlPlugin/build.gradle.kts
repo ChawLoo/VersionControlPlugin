@@ -79,7 +79,7 @@ catalog {
         library("saf-log-okhttp", "com.github.fengzhizi715", "saf-logginginterceptor").version("v1.6.13")
         bundle("saf-log", listOf("saf-log-core", "saf-log-okhttp"))
 
-        library("x5webview", "com.tencent.tbs", "tbssdk").version("54002-beta")
+        library("x5webview", "com.tencent.tbs", "tbssdk").version("44275")
         library("wechat-sdk-android-without-mta", "com.tencent.mm.opensdk", "wechat-sdk-android-without-mta").version("6.8.0")
 
         version("coil", "2.2.2")
@@ -95,7 +95,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "io.github.chawloo"
             artifactId = "VersionControlPlugin"
-            version = "1.1.9"
+            version = "1.1.10"
             from(components["versionCatalog"])
             pom {
                 name.set("VersionControlPlugin")
