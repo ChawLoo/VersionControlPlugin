@@ -25,13 +25,13 @@ catalog {
         library("kotlinx-coroutines-android", "org.jetbrains.kotlinx", "kotlinx-coroutines-android").versionRef("coroutines")
         bundle("coroutines", listOf("kotlinx-coroutines-core", "kotlinx-coroutines-android"))
 
-        library("kotlinx-serialization-json", "org.jetbrains.kotlinx", "kotlinx-serialization-json").version("1.4.1")
+        library("kotlinx-serialization-json", "org.jetbrains.kotlinx", "kotlinx-serialization-json").version("1.5.0-RC")
 
         library("core-ktx", "androidx.core", "core-ktx").version("1.9.0")
-        library("appcompat", "androidx.appcompat", "appcompat").version("1.6.0-rc01")
+        library("appcompat", "androidx.appcompat", "appcompat").version("1.6.0")
         library("multidex", "androidx.multidex", "multidex").version("2.0.1")
         library("activity-ktx", "androidx.activity", "activity-ktx").version("1.6.1")
-        library("fragment-ktx", "androidx.fragment", "fragment-ktx").version("1.5.4")
+        library("fragment-ktx", "androidx.fragment", "fragment-ktx").version("1.5.5")
         library("annotation", "androidx.annotation", "annotation").version("1.5.0")
         library("constraintlayout", "androidx.constraintlayout", "constraintlayout").version("2.1.4")
         library("recyclerview", "androidx.recyclerview", "recyclerview").version("1.2.1")
@@ -41,24 +41,24 @@ catalog {
         library("viewmodel", "androidx.lifecycle", "lifecycle-viewmodel-ktx").versionRef("lifecycle")
         library("livedata", "androidx.lifecycle", "lifecycle-livedata-ktx").versionRef("lifecycle")
 
-        version("room", "2.5.0-beta02")
+        version("room", "2.5.0")
         library("room-runtime", "androidx.room", "room-runtime").versionRef("room")
         library("room-ktx", "androidx.room", "room-ktx").versionRef("room")
         library("room-compiler", "androidx.room", "room-compiler").versionRef("room")
         bundle("room", listOf("room-runtime", "room-ktx"))
 
-        version("koin", "3.3.1")
+        version("koin", "3.3.3")
         library("koin-android", "io.insert-koin", "koin-android").versionRef("koin")
 
         library("androidautosize", "me.jessyan", "autosize").version("1.2.1")
         library("material", "com.google.android.material", "material").version("1.5.0-alpha04")
         library("retrofit", "com.squareup.retrofit2", "retrofit").version("2.9.0")
         library("okhttp", "com.squareup.okhttp3", "okhttp").version("5.0.0-alpha.10")
-        library("brv", "com.github.liangjingkanji", "BRV").version("1.3.86")
+        library("brv", "com.github.liangjingkanji", "BRV").version("1.3.90")
         library("jodatime", "joda-time", "joda-time").version("2.12.2")
         library("basePopup", "io.github.razerdp", "BasePopup").version("3.2.0")
-        library("mmkv", "com.tencent", "mmkv-static").version("1.2.14")
-        library("xPermission", "com.github.getActivity", "XXPermissions").version("16.5")
+        library("mmkv", "com.tencent", "mmkv").version("1.2.15")
+        library("xPermission", "com.github.getActivity", "XXPermissions").version("16.6")
         library("wheelView", "com.github.zyyoona7", "wheelview").version("2.0.4")
         library("toast", "com.github.getActivity", "ToastUtils").version("11.2")
         library("viewbinding-ktx", "com.github.DylanCaiCoding.ViewBindingKTX", "viewbinding-ktx").version("2.1.0")
@@ -95,7 +95,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "io.github.chawloo"
             artifactId = "VersionControlPlugin"
-            version = "1.1.10"
+            version = "1.1.11"
             from(components["versionCatalog"])
             pom {
                 name.set("VersionControlPlugin")
