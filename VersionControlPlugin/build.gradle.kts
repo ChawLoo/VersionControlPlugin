@@ -12,13 +12,14 @@ catalog {
         version("minSdk", "26")
         version("targetSdk", "33")
         version("compileSdk", "33")
-        version("kotlin", "1.7.20")
+        version("kotlin", "1.8.10")
         plugin("kotlin-android", "org.jetbrains.kotlin.android").versionRef("kotlin")
         plugin("kotlin-kapt", "org.jetbrains.kotlin.kapt").versionRef("kotlin")
 
-        library("stdlib", "org.jetbrains.kotlin", "kotlin-stdlib").versionRef("kotlin")
+        library("stdlib-jdk7", "org.jetbrains.kotlin", "kotlin-stdlib-jdk7").versionRef("kotlin")
+        library("stdlib-jdk8", "org.jetbrains.kotlin", "kotlin-stdlib-jdk8").versionRef("kotlin")
         library("reflect", "org.jetbrains.kotlin", "kotlin-reflect").versionRef("kotlin")
-        bundle("kotlin", listOf("stdlib", "reflect"))
+        bundle("kotlin", listOf("stdlib-jdk7", "stdlib-jdk8", "reflect"))
 
         version("coroutines", "1.6.4")
         library("kotlinx-coroutines-core", "org.jetbrains.kotlinx", "kotlinx-coroutines-core").versionRef("coroutines")
@@ -56,7 +57,7 @@ catalog {
         library("okhttp", "com.squareup.okhttp3", "okhttp").version("5.0.0-alpha.10")
         library("brv", "com.github.liangjingkanji", "BRV").version("1.3.90")
         library("jodatime", "joda-time", "joda-time").version("2.12.2")
-        library("basePopup", "io.github.razerdp", "BasePopup").version("3.2.0")
+        library("basePopup", "io.github.razerdp", "BasePopup").version("3.2.1")
         library("mmkv", "com.tencent", "mmkv").version("1.2.15")
         library("xPermission", "com.github.getActivity", "XXPermissions").version("16.6")
         library("wheelView", "com.github.zyyoona7", "wheelview").version("2.0.4")
@@ -95,7 +96,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "io.github.chawloo"
             artifactId = "VersionControlPlugin"
-            version = "1.1.11"
+            version = "1.1.12"
             from(components["versionCatalog"])
             pom {
                 name.set("VersionControlPlugin")
