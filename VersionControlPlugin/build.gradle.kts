@@ -61,7 +61,7 @@ catalog {
         library("mmkv", "com.tencent", "mmkv").version("1.2.15")
         library("xPermission", "com.github.getActivity", "XXPermissions").version("16.6")
         library("wheelView", "com.github.zyyoona7", "wheelview").version("2.0.4")
-        library("toast", "com.github.getActivity", "ToastUtils").version("11.2")
+        library("toast", "com.github.getActivity", "Toaster").version("12.0")
         library("viewbinding-ktx", "com.github.DylanCaiCoding.ViewBindingKTX", "viewbinding-ktx").version("2.1.0")
         library("banner", "io.github.youth5201314", "banner").version("2.2.2")
         library("flexbox", "com.google.android.flexbox", "flexbox").version("3.0.0")
