@@ -54,7 +54,7 @@ catalog {
         library("androidautosize", "me.jessyan", "autosize").version("1.2.1")
         library("material", "com.google.android.material", "material").version("1.5.0-alpha04")
         library("retrofit", "com.squareup.retrofit2", "retrofit").version("2.9.0")
-        library("okhttp", "com.squareup.okhttp3", "okhttp").version("5.0.0-alpha.10")
+        library("okhttp", "com.squareup.okhttp3", "okhttp").version("5.0.0-alpha.11")
         library("brv", "com.github.liangjingkanji", "BRV").version("1.3.90")
         library("jodatime", "joda-time", "joda-time").version("2.12.2")
         library("basePopup", "io.github.razerdp", "BasePopup").version("3.2.1")
