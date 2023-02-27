@@ -1,5 +1,5 @@
 ```
-   一个依据Gradle官方API的统一版本依赖库
+   一个基于Gradle官方提供的API的统一版本依赖库
 ```
 
 [使用说明](https://blog.csdn.net/qq_24889033/article/details/125307004)
