@@ -55,11 +55,11 @@ dependencyResolutionManagement {
 
 android {
     compileSdk = libs.versions.compileSdk.get().toInt()
-	defaultConfig {
+    defaultConfig {
         applicationId = "自己的包名"
         minSdk = libs.versions.minSdk.get().toInt()
         targetSdk = libs.versions.targetSdk.get().toInt()
-	}
+    }
 }
 
 dependencies {
