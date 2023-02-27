@@ -2,7 +2,7 @@
    一个依据Gradle官方API的统一版本依赖库
 ```
 
-[使用说明](https://mp.csdn.net/mp_blog/manage/article?spm=1000.2115.3001.5448)
+[使用说明](https://github.com/ChawLoo/VersionControlPlugin/wiki)
 
 #### Lastest version
 
