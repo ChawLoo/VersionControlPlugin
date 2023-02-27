@@ -6,9 +6,9 @@
 
 #### Lastest version
 
-module|VersionControlPlugin|Language|License|
----|---|---|---|
-version|<img src = "https://maven-badges.herokuapp.com/maven-central/io.github.chawloo/VersionControlPlugin/badge.svg" />|<img src="https://img.shields.io/badge/language-kotlin-orange.svg"/>| [![Hex.pm](https://img.shields.io/hexpm/l/plug.svg)](https://www.apache.org/licenses/LICENSE-2.0)|
+| module  | VersionControlPlugin                                                                                              | Language                                                             | License                                                                                           |
+|---------|-------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
+| version | <img src = "https://maven-badges.herokuapp.com/maven-central/io.github.chawloo/VersionControlPlugin/badge.svg" /> | <img src="https://img.shields.io/badge/language-kotlin-orange.svg"/> | [![Hex.pm](https://img.shields.io/hexpm/l/plug.svg)](https://www.apache.org/licenses/LICENSE-2.0) |
 
 ## 注意
 
