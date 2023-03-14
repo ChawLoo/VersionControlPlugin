@@ -26,7 +26,7 @@ catalog {
         library("kotlinx-coroutines-android", "org.jetbrains.kotlinx", "kotlinx-coroutines-android").versionRef("coroutines")
         bundle("coroutines", listOf("kotlinx-coroutines-core", "kotlinx-coroutines-android"))
 
-        library("kotlinx-serialization-json", "org.jetbrains.kotlinx", "kotlinx-serialization-json").version("1.5.0-RC")
+        library("kotlinx-serialization-json", "org.jetbrains.kotlinx", "kotlinx-serialization-json").version("1.5.0")
 
         library("core-ktx", "androidx.core", "core-ktx").version("1.9.0")
         library("appcompat", "androidx.appcompat", "appcompat").version("1.6.0")
@@ -80,7 +80,7 @@ catalog {
         library("saf-log-okhttp", "com.github.fengzhizi715", "saf-logginginterceptor").version("v1.6.13")
         bundle("saf-log", listOf("saf-log-core", "saf-log-okhttp"))
 
-        library("x5webview", "com.tencent.tbs", "tbssdk").version("44275")
+        library("x5webview", "com.tencent.tbs", "tbssdk").version("44286")
         library("wechat-sdk-android-without-mta", "com.tencent.mm.opensdk", "wechat-sdk-android-without-mta").version("6.8.0")
 
         version("coil", "2.2.2")
