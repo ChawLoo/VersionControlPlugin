@@ -32,8 +32,46 @@ android {
 }
 
 dependencies {
+    implementation(cLibs.bundles.kotlin)
+    implementation(cLibs.bundles.coroutines)
+    implementation(cLibs.kotlinx.serialization.json)
+
     implementation(cLibs.core.ktx)
     implementation(cLibs.appcompat)
-    implementation(cLibs.material)
+    implementation(cLibs.multidex)
+    implementation(cLibs.activity.ktx)
+    implementation(cLibs.fragment.ktx)
+    implementation(cLibs.viewmodel)
+    implementation(cLibs.livedata)
+    implementation(cLibs.annotation)
     implementation(cLibs.constraintlayout)
+    implementation(cLibs.recyclerview)
+    implementation(cLibs.startup.runtime)
+    implementation(cLibs.bundles.room)
+
+
+    implementation(cLibs.material)
+    implementation(cLibs.brv)
+    implementation(cLibs.jodatime)
+    implementation(cLibs.arouter.api)
+    implementation(cLibs.androidautosize)
+    implementation(cLibs.basePopup)
+    implementation(cLibs.toast)
+    implementation(cLibs.koin.android)
+    implementation(cLibs.okhttp)
+    implementation(cLibs.retrofit)
+    implementation(cLibs.xPermission)
+    implementation(cLibs.mmkv)
+    implementation(cLibs.viewbinding.ktx)
+    implementation(cLibs.jodatime)
+    implementation(cLibs.wechat.sdk.android.without.mta)
+    implementation(cLibs.wheelView)
+    implementation(cLibs.x5webview)
+    implementation(cLibs.banner)
+
+    implementation(cLibs.bundles.coil)
+    implementation(cLibs.bundles.saf.log)
+    implementation(cLibs.bundles.immersionbar)
+
+    testImplementation(cLibs.junit)
 }

@@ -60,7 +60,7 @@ catalog {
         library("basePopup", "io.github.razerdp", "BasePopup").version("3.2.1")
         library("mmkv", "com.tencent", "mmkv").version("1.2.15")
         library("xPermission", "com.github.getActivity", "XXPermissions").version("18.0")
-        library("wheelView", "com.github.zyyoona7", "wheelview").version("2.0.7")
+        library("wheelView", "com.github.zyyoona7.WheelPicker", "wheelview").version("2.0.7")
         library("toast", "com.github.getActivity", "Toaster").version("12.2")
         library("viewbinding-ktx", "com.github.DylanCaiCoding.ViewBindingKTX", "viewbinding-ktx").version("2.1.0")
         library("banner", "io.github.youth5201314", "banner").version("2.2.2")
@@ -96,7 +96,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "io.github.chawloo"
             artifactId = "VersionControlPlugin"
-            version = "1.1.13"
+            version = "1.1.14"
             from(components["versionCatalog"])
             pom {
                 name.set("VersionControlPlugin")
