@@ -96,7 +96,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "io.github.chawloo"
             artifactId = "VersionControlPlugin"
-            version = "1.1.12"
+            version = "1.1.13"
             from(components["versionCatalog"])
             pom {
                 name.set("VersionControlPlugin")
