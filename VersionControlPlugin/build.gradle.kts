@@ -12,7 +12,7 @@ catalog {
         version("minSdk", "26")
         version("targetSdk", "33")
         version("compileSdk", "33")
-        version("kotlin", "1.8.10")
+        version("kotlin", "1.8.21")
         plugin("kotlin-android", "org.jetbrains.kotlin.android").versionRef("kotlin")
         plugin("kotlin-kapt", "org.jetbrains.kotlin.kapt").versionRef("kotlin")
 
@@ -21,7 +21,7 @@ catalog {
         library("reflect", "org.jetbrains.kotlin", "kotlin-reflect").versionRef("kotlin")
         bundle("kotlin", listOf("stdlib-jdk7", "stdlib-jdk8", "reflect"))
 
-        version("coroutines", "1.6.4")
+        version("coroutines", "1.7.0-RC")
         library("kotlinx-coroutines-core", "org.jetbrains.kotlinx", "kotlinx-coroutines-core").versionRef("coroutines")
         library("kotlinx-coroutines-android", "org.jetbrains.kotlinx", "kotlinx-coroutines-android").versionRef("coroutines")
         bundle("coroutines", listOf("kotlinx-coroutines-core", "kotlinx-coroutines-android"))
@@ -55,10 +55,10 @@ catalog {
         library("material", "com.google.android.material", "material").version("1.5.0-alpha04")
         library("retrofit", "com.squareup.retrofit2", "retrofit").version("2.9.0")
         library("okhttp", "com.squareup.okhttp3", "okhttp").version("5.0.0-alpha.11")
-        library("brv", "com.github.liangjingkanji", "BRV").version("1.4.0")
+        library("brv", "com.github.liangjingkanji", "BRV").version("1.4.1")
         library("jodatime", "joda-time", "joda-time").version("2.12.5")
         library("basePopup", "io.github.razerdp", "BasePopup").version("3.2.1")
-        library("mmkv", "com.tencent", "mmkv").version("1.2.15")
+        library("mmkv", "com.tencent", "mmkv").version("1.2.16")
         library("xPermission", "com.github.getActivity", "XXPermissions").version("18.0")
         library("wheelView", "com.github.zyyoona7.WheelPicker", "wheelview").version("2.0.7")
         library("toast", "com.github.getActivity", "Toaster").version("12.2")
@@ -70,6 +70,9 @@ catalog {
         version("arouter", "1.5.2")
         library("arouter-compiler", "com.alibaba", "arouter-compiler").versionRef("arouter")
         library("arouter-api", "com.alibaba", "arouter-api").versionRef("arouter")
+
+        version("therouter", "1.1.4-beta1")
+        library("therouter", "cn.therouter", "router").versionRef("therouter")
 
         library("immersionbar", "com.geyifeng.immersionbar", "immersionbar").version("3.2.2")
         library("immersionbar-ktx", "com.geyifeng.immersionbar", "immersionbar-ktx").version("3.2.2")
@@ -96,7 +99,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "io.github.chawloo"
             artifactId = "VersionControlPlugin"
-            version = "1.1.14"
+            version = "1.1.15"
             from(components["versionCatalog"])
             pom {
                 name.set("VersionControlPlugin")
