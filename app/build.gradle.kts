@@ -54,6 +54,7 @@ dependencies {
     implementation(cLibs.brv)
     implementation(cLibs.jodatime)
     implementation(cLibs.arouter.api)
+    implementation(cLibs.therouter)
     implementation(cLibs.androidautosize)
     implementation(cLibs.basePopup)
     implementation(cLibs.toast)
