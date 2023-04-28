@@ -74,6 +74,7 @@ catalog {
 
         version("therouter", "1.1.4-beta1")
         library("therouter", "cn.therouter", "router").versionRef("therouter")
+        library("therouter-apt", "cn.therouter", "apt").versionRef("therouter")
 
         library("immersionbar", "com.geyifeng.immersionbar", "immersionbar").version("3.2.2")
         library("immersionbar-ktx", "com.geyifeng.immersionbar", "immersionbar-ktx").version("3.2.2")
@@ -100,7 +101,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "io.github.chawloo"
             artifactId = "VersionControlPlugin"
-            version = "1.1.17"
+            version = "1.1.18"
             from(components["versionCatalog"])
             pom {
                 name.set("VersionControlPlugin")
