@@ -28,6 +28,14 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.4.6"
+    }
+    packagingOptions {
+        resources {
+            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+        }
+    }
     namespace = "cn.chawloo.versioncontrolplugin"
 }
 
@@ -75,4 +83,20 @@ dependencies {
     implementation(cLibs.bundles.immersionbar)
 
     testImplementation(cLibs.junit)
+
+    val composeBom = platform("androidx.compose:compose-bom:2023.04.01")
+    api(composeBom)
+    androidTestApi(composeBom)
+    api("androidx.compose.material3", "material3")
+    api("androidx.compose.ui", "ui")
+    api("androidx.compose.ui", "ui-tooling-preview")
+    debugApi("androidx.compose.ui", "ui-tooling")
+
+    api(cLibs.bundles.accompanist)
+    api(cLibs.bundles.compose.library)
+
+    // 可选
+    api("androidx.lifecycle", "lifecycle-viewmodel-compose", "2.5.1")
+    api("androidx.activity", "activity-compose", "1.6.1")
+    api("androidx.compose.runtime", "runtime-livedata")
 }
