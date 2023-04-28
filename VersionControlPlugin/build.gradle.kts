@@ -37,6 +37,7 @@ catalog {
         library("constraintlayout", "androidx.constraintlayout", "constraintlayout").version("2.1.4")
         library("recyclerview", "androidx.recyclerview", "recyclerview").version("1.2.1")
         library("startup-runtime", "androidx.startup", "startup-runtime").version("1.1.1")
+        library("splashscreen", "androidx.core", "core-splashscreen").version("1.1.0-alpha01")
 
         version("lifecycle", "2.5.1")
         library("viewmodel", "androidx.lifecycle", "lifecycle-viewmodel-ktx").versionRef("lifecycle")
@@ -99,7 +100,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "io.github.chawloo"
             artifactId = "VersionControlPlugin"
-            version = "1.1.16"
+            version = "1.1.17"
             from(components["versionCatalog"])
             pom {
                 name.set("VersionControlPlugin")
