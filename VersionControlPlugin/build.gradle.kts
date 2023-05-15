@@ -21,12 +21,12 @@ catalog {
         library("reflect", "org.jetbrains.kotlin", "kotlin-reflect").versionRef("kotlin")
         bundle("kotlin", listOf("stdlib-jdk7", "stdlib-jdk8", "reflect"))
 
-        version("coroutines", "1.7.0-RC")
+        version("coroutines", "1.7.1")
         library("kotlinx-coroutines-core", "org.jetbrains.kotlinx", "kotlinx-coroutines-core").versionRef("coroutines")
         library("kotlinx-coroutines-android", "org.jetbrains.kotlinx", "kotlinx-coroutines-android").versionRef("coroutines")
         bundle("coroutines", listOf("kotlinx-coroutines-core", "kotlinx-coroutines-android"))
 
-        library("kotlinx-serialization-json", "org.jetbrains.kotlinx", "kotlinx-serialization-json").version("1.5.0")
+        library("kotlinx-serialization-json", "org.jetbrains.kotlinx", "kotlinx-serialization-json").version("1.5.1")
 
         library("core-ktx", "androidx.core", "core-ktx").version("1.9.0")
         library("appcompat", "androidx.appcompat", "appcompat").version("1.6.1")
@@ -68,10 +68,6 @@ catalog {
         library("flexbox", "com.google.android.flexbox", "flexbox").version("3.0.0")
         library("evenbus", "org.greenrobot", "eventbus").version("3.3.1")
 
-        version("arouter", "1.5.2")
-        library("arouter-compiler", "com.alibaba", "arouter-compiler").versionRef("arouter")
-        library("arouter-api", "com.alibaba", "arouter-api").versionRef("arouter")
-
         version("therouter", "1.1.4-beta1")
         library("therouter", "cn.therouter", "router").versionRef("therouter")
         library("therouter-apt", "cn.therouter", "apt").versionRef("therouter")
@@ -101,7 +97,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "io.github.chawloo"
             artifactId = "VersionControlPlugin"
-            version = "1.1.18"
+            version = "1.2.0"
             from(components["versionCatalog"])
             pom {
                 name.set("VersionControlPlugin")
