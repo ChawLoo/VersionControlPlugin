@@ -12,7 +12,7 @@ catalog {
         version("minSdk", "26")
         version("targetSdk", "33")
         version("compileSdk", "33")
-        version("kotlin", "1.8.20")
+        version("kotlin", "1.8.21")
         plugin("kotlin-android", "org.jetbrains.kotlin.android").versionRef("kotlin")
         plugin("kotlin-kapt", "org.jetbrains.kotlin.kapt").versionRef("kotlin")
 
@@ -68,7 +68,7 @@ catalog {
         library("flexbox", "com.google.android.flexbox", "flexbox").version("3.0.0")
         library("evenbus", "org.greenrobot", "eventbus").version("3.3.1")
 
-        version("therouter", "1.1.4-beta1")
+        version("therouter", "1.2.0-beta2")
         library("therouter", "cn.therouter", "router").versionRef("therouter")
         library("therouter-apt", "cn.therouter", "apt").versionRef("therouter")
 
@@ -97,7 +97,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "io.github.chawloo"
             artifactId = "VersionControlPlugin"
-            version = "1.2.0"
+            version = "1.2.2"
             from(components["versionCatalog"])
             pom {
                 name.set("VersionControlPlugin")
