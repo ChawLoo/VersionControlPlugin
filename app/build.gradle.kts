@@ -84,7 +84,7 @@ dependencies {
 
     testImplementation(cLibs.junit)
 
-    val composeBom = platform("androidx.compose:compose-bom:2023.04.01")
+    val composeBom = platform("androidx.compose:compose-bom:2023.05.01")
     api(composeBom)
     androidTestApi(composeBom)
     api("androidx.compose.material3", "material3")
