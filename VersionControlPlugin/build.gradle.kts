@@ -55,18 +55,17 @@ catalog {
         library("androidautosize", "me.jessyan", "autosize").version("1.2.1")
         library("material", "com.google.android.material", "material").version("1.5.0-alpha04")
         library("retrofit", "com.squareup.retrofit2", "retrofit").version("2.9.0")
-        library("okhttp", "com.squareup.okhttp3", "okhttp").version("5.0.0-alpha.11")
+        library("okhttp", "com.squareup.okhttp3", "okhttp").version("4.11.0")
         library("brv", "com.github.liangjingkanji", "BRV").version("1.4.1")
         library("jodatime", "joda-time", "joda-time").version("2.12.5")
         library("basePopup", "io.github.razerdp", "BasePopup").version("3.2.1")
-        library("mmkv", "com.tencent", "mmkv").version("1.2.16")
+        library("mmkv", "com.tencent", "mmkv").version("1.3.0")
         library("xPermission", "com.github.getActivity", "XXPermissions").version("18.0")
         library("wheelView", "com.github.zyyoona7.WheelPicker", "wheelview").version("2.0.7")
-        library("toast", "com.github.getActivity", "Toaster").version("12.2")
+        library("toast", "com.github.getActivity", "Toaster").version("12.3")
         library("viewbinding-ktx", "com.github.DylanCaiCoding.ViewBindingKTX", "viewbinding-ktx").version("2.1.0")
         library("banner", "io.github.youth5201314", "banner").version("2.2.2")
         library("flexbox", "com.google.android.flexbox", "flexbox").version("3.0.0")
-        library("evenbus", "org.greenrobot", "eventbus").version("3.3.1")
 
         version("therouter", "1.2.0-beta2")
         library("therouter", "cn.therouter", "router").versionRef("therouter")
@@ -97,7 +96,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "io.github.chawloo"
             artifactId = "VersionControlPlugin"
-            version = "1.2.2"
+            version = "1.2.3"
             from(components["versionCatalog"])
             pom {
                 name.set("VersionControlPlugin")
