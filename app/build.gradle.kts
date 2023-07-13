@@ -29,9 +29,9 @@ android {
         jvmTarget = "11"
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.6"
+        kotlinCompilerExtensionVersion = "1.4.8"
     }
-    packagingOptions {
+    packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
@@ -49,8 +49,8 @@ dependencies {
     implementation(cLibs.multidex)
     implementation(cLibs.activity.ktx)
     implementation(cLibs.fragment.ktx)
-    implementation(cLibs.viewmodel)
-    implementation(cLibs.livedata)
+    implementation(cLibs.lifecycle.viewmodel)
+    implementation(cLibs.lifecycle.livedata)
     implementation(cLibs.annotation)
     implementation(cLibs.constraintlayout)
     implementation(cLibs.recyclerview)
@@ -61,12 +61,10 @@ dependencies {
     implementation(cLibs.material)
     implementation(cLibs.brv)
     implementation(cLibs.jodatime)
-    implementation(cLibs.arouter.api)
     implementation(cLibs.therouter)
     implementation(cLibs.androidautosize)
     implementation(cLibs.basePopup)
     implementation(cLibs.toast)
-    implementation(cLibs.koin.android)
     implementation(cLibs.okhttp)
     implementation(cLibs.retrofit)
     implementation(cLibs.xPermission)
@@ -92,11 +90,6 @@ dependencies {
     api("androidx.compose.ui", "ui-tooling-preview")
     debugApi("androidx.compose.ui", "ui-tooling")
 
-    api(cLibs.bundles.accompanist)
+    api(cLibs.accompanist.systemuicontroller)
     api(cLibs.bundles.compose.library)
-
-    // 可选
-    api("androidx.lifecycle", "lifecycle-viewmodel-compose", "2.5.1")
-    api("androidx.activity", "activity-compose", "1.6.1")
-    api("androidx.compose.runtime", "runtime-livedata")
 }

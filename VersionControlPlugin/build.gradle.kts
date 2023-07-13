@@ -24,7 +24,13 @@ catalog {
         library("stdlib-jdk7", "org.jetbrains.kotlin", "kotlin-stdlib-jdk7").versionRef("kotlin")
         library("stdlib-jdk8", "org.jetbrains.kotlin", "kotlin-stdlib-jdk8").versionRef("kotlin")
         library("reflect", "org.jetbrains.kotlin", "kotlin-reflect").versionRef("kotlin")
-        bundle("kotlin", listOf("stdlib-jdk7", "stdlib-jdk8", "reflect"))
+        bundle(
+            "kotlin", listOf(
+                "stdlib-jdk7",
+                "stdlib-jdk8",
+                "reflect"
+            )
+        )
 
         version("coroutines", "1.7.2")
         library("kotlinx-coroutines-core", "org.jetbrains.kotlinx", "kotlinx-coroutines-core").versionRef("coroutines")
@@ -45,6 +51,24 @@ catalog {
         version("lifecycle", "2.6.1")
         library("lifecycle-viewmodel", "androidx.lifecycle", "lifecycle-viewmodel-ktx").versionRef("lifecycle")
         library("lifecycle-livedata", "androidx.lifecycle", "lifecycle-livedata-ktx").versionRef("lifecycle")
+
+        bundle(
+            "androidx", listOf(
+                "core-ktx",
+                "appcompat",
+                "multidex",
+                "activity-ktx",
+                "fragment-ktx",
+                "constraintlayout",
+                "recyclerview",
+                "startup-runtime",
+                "splashscreen",
+                "lifecycle-viewmodel",
+                "lifecycle-livedata",
+            )
+        )
+
+
 
         version("room", "2.5.2")
         library("room-runtime", "androidx.room", "room-runtime").versionRef("room")
@@ -92,7 +116,14 @@ catalog {
         library("pictureSelector-compress", "io.github.lucksiege", "compress").versionRef("pictureSelector")
         library("pictureSelector-ucrop", "io.github.lucksiege", "ucrop").versionRef("pictureSelector")
         library("pictureSelector-camerax", "io.github.lucksiege", "camerax").versionRef("pictureSelector")
-        bundle("pictureSelector", listOf("pictureSelector", "pictureSelector-compress", "pictureSelector-ucrop", "pictureSelector-camerax"))
+        bundle(
+            "pictureSelector", listOf(
+                "pictureSelector",
+                "pictureSelector-compress",
+                "pictureSelector-ucrop",
+                "pictureSelector-camerax"
+            )
+        )
 
         version("saf-log", "2.6.9")
         library("saf-log-core", "com.github.fengzhizi715.SAF-Kotlin-log", "core").versionRef("saf-log")
@@ -116,7 +147,15 @@ catalog {
         library("activity-compose", "androidx.activity", "activity-compose").version("1.7.2")
         library("lifecycle-viewmodel-compose", "androidx.lifecycle", "lifecycle-viewmodel-compose").versionRef("lifecycle")
 
-        bundle("compose-library", listOf("constraintlayout-compose", "navigation-compose", "activity-compose", "lifecycle-viewmodel-compose"))
+        bundle(
+            "compose-library", listOf(
+                "constraintlayout-compose",
+                "navigation-compose",
+                "activity-compose",
+                "lifecycle-viewmodel-compose",
+                "compose-coil"
+            )
+        )
 
         library("junit", "junit", "junit").version("4.13.2")
     }
@@ -244,11 +283,6 @@ android {
 }
 
 dependencies {
-    implementation(cLibs.core.ktx)
-    implementation(cLibs.appcompat)
-    implementation(cLibs.material)
+    implementation(cLibs.bundles.androidx)
     testImplementation(cLibs.junit)
-    androidTestImplementation("androidx.test.ext:junit:1.1.4")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.0")
 }
-
