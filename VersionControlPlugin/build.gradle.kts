@@ -15,13 +15,11 @@ catalog {
         version("buildToolsVersion", "31.0.0")
         version("compileSdkPreview", "UpsideDownCake")
 
-
         version("kotlin", "1.8.22")
         plugin("kotlin-android", "org.jetbrains.kotlin.android").versionRef("kotlin")
         plugin("kotlin-kapt", "org.jetbrains.kotlin.kapt").versionRef("kotlin")
         plugin("kotlin-parcelize", "org.jetbrains.kotlin.plugin.parcelize").versionRef("kotlin")
         plugin("kotlin-serialization", "org.jetbrains.kotlin.plugin.serialization").versionRef("kotlin")
-
 
         library("stdlib-jdk7", "org.jetbrains.kotlin", "kotlin-stdlib-jdk7").versionRef("kotlin")
         library("stdlib-jdk8", "org.jetbrains.kotlin", "kotlin-stdlib-jdk8").versionRef("kotlin")
@@ -60,6 +58,11 @@ catalog {
         library("okhttp", "com.squareup.okhttp3", "okhttp").version("4.11.0")
         library("net", "com.github.liangjingkanji", "Net").version("3.5.8")
         library("brv", "com.github.liangjingkanji", "BRV").version("1.4.1")
+
+        version("chucker", "4.0.0")
+        library("chucker", "com.github.chuckerteam.chucker", "library").versionRef("chucker")
+        library("chucker-no-op", "com.github.chuckerteam.chucker", "library").versionRef("chucker")
+
         library("brvah", "com.github.CymChad", "BaseRecyclerViewAdapterHelper").version("3.0.11")
         library("kotlinx-serialization-json", "org.jetbrains.kotlinx", "kotlinx-serialization-json").version("1.5.1")
         library("fastjson", "com.alibaba", "fastjson").version("1.2.79")
