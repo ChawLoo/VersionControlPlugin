@@ -106,11 +106,7 @@ catalog {
         library("compose-coil", "io.coil-kt", "coil-compose").versionRef("coil")
         bundle("coil", listOf("coil", "coil-gif"))
 
-        version("accompanistVer", "0.30.1")
-        library("accompanist-navigation-animation", "com.google.accompanist", "accompanist-navigation-animation").versionRef("accompanistVer")
-        library("accompanist-systemuicontroller", "com.google.accompanist", "accompanist-systemuicontroller").versionRef("accompanistVer")
-        library("accompanist-pager", "com.google.accompanist", "accompanist-pager").versionRef("accompanistVer")
-        bundle("accompanist", listOf("accompanist-navigation-animation", "accompanist-systemuicontroller", "accompanist-pager"))
+        library("accompanist-systemuicontroller", "com.google.accompanist", "accompanist-systemuicontroller").version("0.30.1")
 
         library("navigation-compose", "androidx.navigation", "navigation-compose").version("2.6.0")
         library("constraintlayout-compose", "androidx.constraintlayout", "constraintlayout-compose").version("1.0.1")
