@@ -12,7 +12,7 @@ catalog {
         version("minSdk", "26")
         version("targetSdk", "33")
         version("compileSdk", "33")
-        version("buildToolsVersion", "31.0.0")
+        version("buildToolsVersion", "33.0.1")
         version("compileSdkPreview", "UpsideDownCake")
 
         version("kotlin", "1.8.22")
@@ -41,10 +41,10 @@ catalog {
         library("appcompat", "androidx.appcompat", "appcompat").version("1.6.1")
         library("multidex", "androidx.multidex", "multidex").version("2.0.1")
         library("activity-ktx", "androidx.activity", "activity-ktx").version("1.7.2")
-        library("fragment-ktx", "androidx.fragment", "fragment-ktx").version("1.5.7")
+        library("fragment-ktx", "androidx.fragment", "fragment-ktx").version("1.6.0")
         library("annotation", "androidx.annotation", "annotation").version("1.6.0")
         library("constraintlayout", "androidx.constraintlayout", "constraintlayout").version("2.1.4")
-        library("recyclerview", "androidx.recyclerview", "recyclerview").version("1.2.1")
+        library("recyclerview", "androidx.recyclerview", "recyclerview").version("1.3.0")
         library("startup-runtime", "androidx.startup", "startup-runtime").version("1.1.1")
         library("splashscreen", "androidx.core", "core-splashscreen").version("1.0.1")
 
@@ -77,11 +77,11 @@ catalog {
         bundle("room", listOf("room-runtime", "room-ktx"))
 
         library("androidautosize", "me.jessyan", "autosize").version("1.2.1")
-        library("material", "com.google.android.material", "material").version("1.5.0-alpha04")
+        library("material", "com.google.android.material", "material").version("1.9.0")
         library("retrofit", "com.squareup.retrofit2", "retrofit").version("2.9.0")
         library("okhttp", "com.squareup.okhttp3", "okhttp").version("4.11.0")
         library("net", "com.github.liangjingkanji", "Net").version("3.5.8")
-        library("brv", "com.github.liangjingkanji", "BRV").version("1.4.1")
+        library("brv", "com.github.liangjingkanji", "BRV").version("1.4.3")
 
         version("chucker", "4.0.0")
         library("chucker", "com.github.chuckerteam.chucker", "library").versionRef("chucker")
