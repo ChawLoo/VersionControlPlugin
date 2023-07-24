@@ -48,10 +48,6 @@ catalog {
         library("startup-runtime", "androidx.startup", "startup-runtime").version("1.1.1")
         library("splashscreen", "androidx.core", "core-splashscreen").version("1.0.1")
 
-        version("lifecycle", "2.6.1")
-        library("lifecycle-viewmodel", "androidx.lifecycle", "lifecycle-viewmodel-ktx").versionRef("lifecycle")
-        library("lifecycle-livedata", "androidx.lifecycle", "lifecycle-livedata-ktx").versionRef("lifecycle")
-
         bundle(
             "androidx", listOf(
                 "core-ktx",
@@ -63,8 +59,6 @@ catalog {
                 "recyclerview",
                 "startup-runtime",
                 "splashscreen",
-                "lifecycle-viewmodel",
-                "lifecycle-livedata",
             )
         )
 
@@ -76,16 +70,14 @@ catalog {
         library("room-compiler", "androidx.room", "room-compiler").versionRef("room")
         bundle("room", listOf("room-runtime", "room-ktx"))
 
-        library("androidautosize", "me.jessyan", "autosize").version("1.2.1")
+        library("androidautosize", "com.github.JessYanCoding", "AndroidAutoSize").version("v1.2.1")
         library("material", "com.google.android.material", "material").version("1.9.0")
         library("retrofit", "com.squareup.retrofit2", "retrofit").version("2.9.0")
         library("okhttp", "com.squareup.okhttp3", "okhttp").version("4.11.0")
         library("net", "com.github.liangjingkanji", "Net").version("3.5.8")
         library("brv", "com.github.liangjingkanji", "BRV").version("1.4.3")
 
-        version("chucker", "4.0.0")
-        library("chucker", "com.github.chuckerteam.chucker", "library").versionRef("chucker")
-        library("chucker-no-op", "com.github.chuckerteam.chucker", "library").versionRef("chucker")
+        library("chucker", "com.github.chuckerteam.chucker", "library").version("4.0.0")
 
         library("brvah", "com.github.CymChad", "BaseRecyclerViewAdapterHelper").version("3.0.11")
         library("kotlinx-serialization-json", "org.jetbrains.kotlinx", "kotlinx-serialization-json").version("1.5.1")
@@ -102,7 +94,7 @@ catalog {
         library("banner", "io.github.youth5201314", "banner").version("2.2.2")
         library("flexbox", "com.google.android.flexbox", "flexbox").version("3.0.0")
 
-        version("therouter", "1.2.0-beta3")
+        version("therouter", "1.2.0-beta4")
         library("therouter", "cn.therouter", "router").versionRef("therouter")
         library("therouter-apt", "cn.therouter", "apt").versionRef("therouter")
         plugin("therouter", "cn.therouter").versionRef("therouter")
@@ -145,14 +137,12 @@ catalog {
         library("navigation-compose", "androidx.navigation", "navigation-compose").version("2.6.0")
         library("constraintlayout-compose", "androidx.constraintlayout", "constraintlayout-compose").version("1.0.1")
         library("activity-compose", "androidx.activity", "activity-compose").version("1.7.2")
-        library("lifecycle-viewmodel-compose", "androidx.lifecycle", "lifecycle-viewmodel-compose").versionRef("lifecycle")
 
         bundle(
             "compose-library", listOf(
                 "constraintlayout-compose",
                 "navigation-compose",
                 "activity-compose",
-                "lifecycle-viewmodel-compose",
                 "compose-coil"
             )
         )
