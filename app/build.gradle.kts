@@ -49,12 +49,9 @@ dependencies {
     implementation(cLibs.multidex)
     implementation(cLibs.activity.ktx)
     implementation(cLibs.fragment.ktx)
-    implementation(cLibs.lifecycle.viewmodel)
-    implementation(cLibs.lifecycle.livedata)
     implementation(cLibs.annotation)
     implementation(cLibs.constraintlayout)
     implementation(cLibs.recyclerview)
-    implementation(cLibs.startup.runtime)
     implementation(cLibs.bundles.room)
 
 
