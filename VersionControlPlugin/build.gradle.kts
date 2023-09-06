@@ -97,7 +97,7 @@ catalog {
         library("banner", "io.github.youth5201314", "banner").version("2.2.2")
         library("flexbox", "com.google.android.flexbox", "flexbox").version("3.0.0")
 
-        version("therouter", "1.2.0-rc1")
+        version("therouter", "1.2.0-rc2")
         library("therouter", "cn.therouter", "router").versionRef("therouter")
         library("therouter-apt", "cn.therouter", "apt").versionRef("therouter")
         plugin("therouter", "cn.therouter.agp8").versionRef("therouter")
@@ -173,7 +173,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "io.github.chawloo"
             artifactId = "VersionControlPlugin"
-            version = "1.2.3"
+            version = "1.3.0"
             from(components["versionCatalog"])
             pom {
                 name.set("VersionControlPlugin")
@@ -255,6 +255,21 @@ publishing {
             }
             credentials {
                 username = userName
+                password = pwd
+            }
+        }
+        maven {
+            isAllowInsecureProtocol = true
+            val releaseRepoUrl = uri("http://192.168.8.12:8081/repository/maven-releases/")
+            val snapshotRepoUrl = uri("https://s01.oss.sonatype.org/content/repositories/snapshots")
+            url = if (version.toString().endsWith("SNAPSHOT")) {
+                snapshotRepoUrl
+            } else {
+                releaseRepoUrl
+            }
+            credentials {
+                username = rootProject.properties["maven.local.username"].toString()
+                val pwd = rootProject.properties["maven.local.password"].toString()
                 password = pwd
             }
         }
