@@ -234,33 +234,10 @@ publishing {
             }
         }
     }
-    val userName = file("../maven.properties").takeIf { it.canRead() }?.run {
-        val versionProps = Properties()
-        versionProps.load(inputStream())
-        versionProps["maven.username"].toString()
-    }
-    val pwd = file("../maven.properties").takeIf { it.canRead() }?.run {
-        val versionProps = Properties()
-        versionProps.load(inputStream())
-        versionProps["maven.password"].toString()
-    }
     repositories {
         maven {
-            val releaseRepoUrl = uri("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/")
-            val snapshotRepoUrl = uri("https://s01.oss.sonatype.org/content/repositories/snapshots/")
-            url = if (version.toString().endsWith("SNAPSHOT")) {
-                snapshotRepoUrl
-            } else {
-                releaseRepoUrl
-            }
-            credentials {
-                username = userName
-                password = pwd
-            }
-        }
-        maven {
             isAllowInsecureProtocol = true
-            val releaseRepoUrl = uri("http://192.168.8.12:8081/repository/maven-releases/")
+            val releaseRepoUrl = uri("http://47.97.187.94:8536/repository/maven-android/")
             val snapshotRepoUrl = uri("https://s01.oss.sonatype.org/content/repositories/snapshots")
             url = if (version.toString().endsWith("SNAPSHOT")) {
                 snapshotRepoUrl

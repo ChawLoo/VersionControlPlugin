@@ -1,13 +1,26 @@
 buildscript {
     repositories {
-        gradlePluginPortal()
+        val localUserName = file("maven.properties").takeIf { it.canRead() }?.run {
+            val versionProps = java.util.Properties()
+            versionProps.load(inputStream())
+            versionProps["maven.aliyun.username"].toString()
+        }
+        val localPwd = file("maven.properties").takeIf { it.canRead() }?.run {
+            val versionProps = java.util.Properties()
+            versionProps.load(inputStream())
+            versionProps["maven.aliyun.password"].toString()
+        }
+        maven {
+            isAllowInsecureProtocol = true
+            setUrl("http://47.97.187.94:8536/repository/maven-android/")
+            credentials {
+                username = localUserName
+                password = localPwd
+            }
+        }
         mavenCentral()
-        maven(url = "https://maven.aliyun.com/repository/central")
-        maven(url = "https://maven.aliyun.com/repository/public")
-        maven(url = "https://maven.aliyun.com/repository/google")
-        maven(url = "https://maven.aliyun.com/repository/gradle-plugin")
-        maven(url = "https://jitpack.io")
         google()
+        maven(url = "https://jitpack.io")
     }
 
     dependencies {
