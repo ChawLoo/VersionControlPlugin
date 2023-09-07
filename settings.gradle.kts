@@ -9,19 +9,19 @@ dependencyResolutionManagement {
     val localUserName = file("maven.properties").takeIf { it.canRead() }?.run {
         val versionProps = java.util.Properties()
         versionProps.load(inputStream())
-        versionProps["maven.aliyun.username"].toString()
+        versionProps["maven.local.username"].toString()
     }
     val localPwd = file("maven.properties").takeIf { it.canRead() }?.run {
         val versionProps = java.util.Properties()
         versionProps.load(inputStream())
-        versionProps["maven.aliyun.password"].toString()
+        versionProps["maven.local.password"].toString()
     }
     repositories {
         google()
         mavenCentral()
         maven {
             isAllowInsecureProtocol = true
-            url = uri("https://packages.aliyun.com/maven/repository/2414883-release-tOPoja/")
+            url = uri("http://47.97.187.94:8536/repository/maven-android/")
             credentials {
                 username = localUserName
                 password = localPwd
@@ -31,7 +31,7 @@ dependencyResolutionManagement {
     }
     versionCatalogs {
         create("cLibs") {
-            from(files("VersionControlPlugin/build/version-catalog/libs.versions.toml"))
+            from("io.github.chawloo:VersionControlPlugin:1.3.0")
         }
     }
 }

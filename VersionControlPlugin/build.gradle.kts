@@ -246,8 +246,7 @@ publishing {
             }
             credentials {
                 username = rootProject.properties["maven.local.username"].toString()
-                val pwd = rootProject.properties["maven.local.password"].toString()
-                password = pwd
+                password = rootProject.properties["maven.local.password"].toString()
             }
         }
     }
