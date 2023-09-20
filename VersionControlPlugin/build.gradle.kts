@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.konan.properties.Properties
-
 plugins {
     id("com.android.library")
     kotlin("android")
@@ -97,7 +95,7 @@ catalog {
         library("banner", "io.github.youth5201314", "banner").version("2.2.2")
         library("flexbox", "com.google.android.flexbox", "flexbox").version("3.0.0")
 
-        version("therouter", "1.2.0-rc2")
+        version("therouter", "1.2.0-rc3")
         library("therouter", "cn.therouter", "router").versionRef("therouter")
         library("therouter-apt", "cn.therouter", "apt").versionRef("therouter")
         plugin("therouter", "cn.therouter.agp8").versionRef("therouter")
@@ -173,7 +171,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "io.github.chawloo"
             artifactId = "VersionControlPlugin"
-            version = "1.3.0"
+            version = "1.3.1"
             from(components["versionCatalog"])
             pom {
                 name.set("VersionControlPlugin")
@@ -236,17 +234,16 @@ publishing {
     }
     repositories {
         maven {
-            isAllowInsecureProtocol = true
-            val releaseRepoUrl = uri("http://47.97.187.94:8536/repository/maven-android/")
-            val snapshotRepoUrl = uri("https://s01.oss.sonatype.org/content/repositories/snapshots")
+            val releaseRepoUrl = uri("https://packages.aliyun.com/maven/repository/2418478-release-GhmPUt/")
+            val snapshotRepoUrl = uri("https://packages.aliyun.com/maven/repository/2418478-snapshot-jOnPPh/")
             url = if (version.toString().endsWith("SNAPSHOT")) {
                 snapshotRepoUrl
             } else {
                 releaseRepoUrl
             }
             credentials {
-                username = rootProject.properties["maven.local.username"].toString()
-                password = rootProject.properties["maven.local.password"].toString()
+                username = "609399173a10edbf367f5264"
+                password = "=RTs0bvMruGT"
             }
         }
     }
@@ -272,11 +269,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
     namespace = "cn.chawloo.versioncontrolplugin"
 }
