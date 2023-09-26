@@ -75,7 +75,7 @@ catalog {
         library("material", "com.google.android.material", "material").version("1.9.0")
         library("retrofit", "com.squareup.retrofit2", "retrofit").version("2.9.0")
         library("okhttp", "com.squareup.okhttp3", "okhttp").version("4.11.0")
-        library("net", "com.github.liangjingkanji", "Net").version("3.6.1")
+        library("net", "com.github.liangjingkanji", "Net").version("3.6.2")
         library("brv", "com.github.liangjingkanji", "BRV").version("1.5.2")
 
         library("chucker", "com.github.chuckerteam.chucker", "library").version("4.0.0")
@@ -171,7 +171,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "io.github.chawloo"
             artifactId = "VersionControlPlugin"
-            version = "1.3.2"
+            version = "1.3.3"
             from(components["versionCatalog"])
             pom {
                 name.set("VersionControlPlugin")
