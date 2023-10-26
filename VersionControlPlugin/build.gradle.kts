@@ -13,7 +13,7 @@ catalog {
         version("buildToolsVersion", "33.0.1")
         version("compileSdkPreview", "UpsideDownCake")
         version("kotlin", "1.9.10")
-        version("gradleVer", "8.1.1")
+        version("gradleVer", "8.1.2")
 
         plugin("android-application", "com.android.application").versionRef("gradleVer")
         plugin("android-library", "com.android.library").versionRef("gradleVer")
@@ -171,7 +171,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "io.github.chawloo"
             artifactId = "VersionControlPlugin"
-            version = "1.4.0"
+            version = "1.4.1"
             from(components["versionCatalog"])
             pom {
                 name.set("VersionControlPlugin")
