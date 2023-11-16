@@ -13,7 +13,7 @@ catalog {
         version("buildToolsVersion", "33.0.1")
         version("compileSdkPreview", "UpsideDownCake")
         version("kotlin", "1.9.10")
-        version("gradleVer", "8.1.2")
+        version("gradleVer", "8.1.3")
 
         plugin("android-application", "com.android.application").versionRef("gradleVer")
         plugin("android-library", "com.android.library").versionRef("gradleVer")
@@ -40,11 +40,14 @@ catalog {
         library("kotlinx-coroutines-android", "org.jetbrains.kotlinx", "kotlinx-coroutines-android").versionRef("coroutines")
         bundle("coroutines", listOf("kotlinx-coroutines-core", "kotlinx-coroutines-android"))
 
+
+
+        version("activity", "1.8.1")
         library("core-ktx", "androidx.core", "core-ktx").version("1.12.0")
         library("appcompat", "androidx.appcompat", "appcompat").version("1.6.1")
         library("multidex", "androidx.multidex", "multidex").version("2.0.1")
-        library("activity-ktx", "androidx.activity", "activity-ktx").version("1.8.0")
-        library("fragment-ktx", "androidx.fragment", "fragment-ktx").version("1.6.1")
+        library("activity-ktx", "androidx.activity", "activity-ktx").versionRef("activity")
+        library("fragment-ktx", "androidx.fragment", "fragment-ktx").version("1.6.2")
         library("annotation", "androidx.annotation", "annotation").version("1.7.0")
         library("constraintlayout", "androidx.constraintlayout", "constraintlayout").version("2.1.4")
         library("recyclerview", "androidx.recyclerview", "recyclerview").version("1.3.2")
@@ -75,13 +78,13 @@ catalog {
         library("material", "com.google.android.material", "material").version("1.9.0")
         library("retrofit", "com.squareup.retrofit2", "retrofit").version("2.9.0")
         library("okhttp", "com.squareup.okhttp3", "okhttp").version("4.11.0")
-        library("net", "com.github.liangjingkanji", "Net").version("3.6.2")
-        library("brv", "com.github.liangjingkanji", "BRV").version("1.5.2")
+        library("net", "com.github.liangjingkanji", "Net").version("3.6.4")
+        library("brv", "com.github.liangjingkanji", "BRV").version("1.5.6")
 
         library("chucker", "com.github.chuckerteam.chucker", "library").version("4.0.0")
 
         library("brvah", "com.github.CymChad", "BaseRecyclerViewAdapterHelper").version("3.0.11")
-        library("kotlinx-serialization-json", "org.jetbrains.kotlinx", "kotlinx-serialization-json").version("1.6.0")
+        library("kotlinx-serialization-json", "org.jetbrains.kotlinx", "kotlinx-serialization-json").version("1.6.1")
         library("fastjson", "com.alibaba", "fastjson").version("1.2.79")
         library("jodatime", "joda-time", "joda-time").version("2.12.5")
         library("crashReport", "com.tencent.bugly", "crashreport").version("4.1.9.2")
@@ -89,13 +92,13 @@ catalog {
         library("mmkv", "com.tencent", "mmkv-static").version("1.3.1")
         library("xPermission", "com.github.getActivity", "XXPermissions").version("18.5")
         library("wheelView", "com.github.zyyoona7.WheelPicker", "wheelview").version("2.0.7")
-        library("toast", "com.github.getActivity", "Toaster").version("12.5")
+        library("toast", "com.github.getActivity", "Toaster").version("12.6")
         library("viewbinding-ktx-old", "com.github.DylanCaiCoding.ViewBindingKTX", "viewbinding-ktx").version("1.2.2")
         library("viewbinding-ktx", "com.github.DylanCaiCoding.ViewBindingKTX", "viewbinding-ktx").version("2.1.0")
         library("banner", "io.github.youth5201314", "banner").version("2.2.2")
         library("flexbox", "com.google.android.flexbox", "flexbox").version("3.0.0")
 
-        version("therouter", "1.2.0-rc7")
+        version("therouter", "1.2.1")
         library("therouter", "cn.therouter", "router").versionRef("therouter")
         library("therouter-apt", "cn.therouter", "apt").versionRef("therouter")
         plugin("therouter", "cn.therouter.agp8").versionRef("therouter")
@@ -124,10 +127,10 @@ catalog {
         bundle("saf-log", listOf("saf-log-core", "saf-log-okhttp"))
 
 
-        library("x5webview", "com.tencent.tbs", "tbssdk").version("44286")
+        library("x5webview", "com.tencent.tbs", "tbssdk").version("44339")
         library("wechat-sdk-android-without-mta", "com.tencent.mm.opensdk", "wechat-sdk-android-without-mta").version("6.8.0")
 
-        version("coil", "2.4.0")
+        version("coil", "2.5.0")
         library("coil", "io.coil-kt", "coil").versionRef("coil")
         library("coil-gif", "io.coil-kt", "coil-gif").versionRef("coil")
         library("compose-coil", "io.coil-kt", "coil-compose").versionRef("coil")
@@ -139,15 +142,14 @@ catalog {
         library("compose-ui", "androidx.compose.ui", "ui").withoutVersion()
         library("compose-ui-tooling-preview", "androidx.compose.ui", "ui-tooling-preview").withoutVersion()
         library("compose-runtime-livedata", "androidx.compose.runtime", "runtime-livedata").withoutVersion()
-
         library("compose-ui-tooling", "androidx.compose.ui", "ui-tooling").withoutVersion()
 
 
         library("accompanist-systemuicontroller", "com.google.accompanist", "accompanist-systemuicontroller").version("0.32.0")
 
-        library("navigation-compose", "androidx.navigation", "navigation-compose").version("2.7.4")
+        library("navigation-compose", "androidx.navigation", "navigation-compose").version("2.7.5")
         library("constraintlayout-compose", "androidx.constraintlayout", "constraintlayout-compose").version("1.0.1")
-        library("activity-compose", "androidx.activity", "activity-compose").version("1.8.0")
+        library("activity-compose", "androidx.activity", "activity-compose").versionRef("activity")
 
         bundle(
             "compose-library", listOf(
@@ -171,7 +173,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "io.github.chawloo"
             artifactId = "VersionControlPlugin"
-            version = "1.4.1"
+            version = "1.4.2"
             from(components["versionCatalog"])
             pom {
                 name.set("VersionControlPlugin")
