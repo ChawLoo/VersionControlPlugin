@@ -14,9 +14,9 @@
 
 [官方文档](https://docs.gradle.org/7.3/userguide/platforms.html)
 
-:warning: Central declaration of dependencies is an incubating feature. It requires the activation of the `VERSION_CATALOGS` [feature preview](https://docs.gradle.org/7.3/userguide/feature_lifecycle.html#feature_preview).:warning: 
+:warning: Central declaration of dependencies is an incubating feature. It requires the activation of the `VERSION_CATALOGS` [feature preview](https://docs.gradle.org/7.3/userguide/feature_lifecycle.html#feature_preview). :warning: 
 
-:warning: 中央依赖声明是一个孵化特性。它需要激活 `VERSION_CATALOGS` [功能预览](https://docs.gradle.org/7.3/userguide/feature_lifecycle.html#feature_preview).:warning: 
+:warning: 中央依赖声明是一个孵化特性。它需要激活 `VERSION_CATALOGS` [功能预览](https://docs.gradle.org/7.3/userguide/feature_lifecycle.html#feature_preview). :warning: 
 
 ## 安装
 
