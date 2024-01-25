@@ -1,3 +1,5 @@
+## ⚠️ Deprecated ⚠️
+Migrating to [QuickBaseLib](https://github.com/ChawLoo/QuickBaseLib),Merge with this library
 ```
    一个基于Gradle官方提供的API的统一版本依赖库
 ```
